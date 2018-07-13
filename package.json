@@ -1,0 +1,54 @@
+{
+  "name": "adonis-bugsnag",
+  "version": "1.0.0",
+  "description": "Bugsnag for Adonis Framework",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "posttest": "npm run coverage",
+    "test:local": "FORCE_COLOR=true node bin/index.js --local",
+    "test": "nyc npm run test:local",
+    "test:win": "set FORCE_COLOR=true && node bin/index.js --win",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [
+    "Adonis",
+    "Framework",
+    "Bugsnag",
+    "error",
+    "reporter"
+  ],
+  "author": "Pedro Perafán Carrasco",
+  "license": "MIT",
+  "dependencies": {
+    "@adonisjs/fold": "^4.0.8",
+    "bugsnag": "^2.4.3"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "japa": "^1.0.6",
+    "japa-cli": "^1.0.1",
+    "nyc": "^11.7.1",
+    "semver": "^5.5.0",
+    "standard": "^11.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Perafan18/adonis-bugsnag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Perafan18/adonis-bugsnag/issues"
+  },
+  "homepage": "https://github.com/Perafan18/adonis-bugsnag#readme",
+  "nyc": {
+    "exclude": [
+      "bin"
+    ]
+  },
+  "standard": {
+    "globals": [
+      "use"
+    ]
+  }
+}
