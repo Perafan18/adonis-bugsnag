@@ -7,7 +7,7 @@ const bugsnag = require('bugsnag')
 test.group('Bugsnag', () => {
   test('configure and throw exception', async () => {
     const apiKey = process.env.BUGSNAG_API_KEY
-    bugsnag.register(apiKey)
+    bugsnag(apiKey)
     try {
       let name = 'Pedro Perafán'
 
