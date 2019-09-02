@@ -23,8 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@adonisjs/fold": "^4.0.8",
-    "@bugsnag/js": "^5.2.0",
-    "bugsnag": "^2.4.3"
+    "@bugsnag/js": "^5.2.0"
   },
   "devDependencies": {
     "dotenv": "^5.0.1",
